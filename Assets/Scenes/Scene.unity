@@ -4307,7 +4307,7 @@ MonoBehaviour:
   selectedJoint: 
   selectedIndex: 0
   control: 0
-  stiffness: 10000
+  stiffness: 20000
   damping: 100
   forceLimit: 1000
   speed: 30
