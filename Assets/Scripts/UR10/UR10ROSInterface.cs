@@ -22,40 +22,23 @@ public class UR10ROSInterface : MonoBehaviour
 
     // Articulation Bodies
     private ArticulationBody[] jointArticulationBodies;
-    private List<ArticulationBody> gripperJoints;
 
     // Hardcoded variables 
     private int numRobotJoints = 6;
     private int numForceTorques = 6;
-    private readonly float jointAssignmentWait = 0.06f;
-    private readonly float gripperAngle = 45f;
-
-    // Multipliers correspond to the URDF mimic tag for each joint
-    private float[] multipliers = new float[] { -1f, -1f, -1f, 1f, 1f, 1f };
 
     // Variables required for ROS communication 
     public string topicJointState = "/unity_ur10_joint_states";
 
     public GameObject UR10;
     float pre_t = 0;
+
     
     List<float> positions = new List<float>();
     List<float> velocities = new List<float>();
     List<float> targets = new List<float>();
     List<float> targetVelocities = new List<float>();
-    double[] command;
-
-    public IEnumerator IterateToGrip(bool toClose)
-    {
-        var grippingAngle = toClose ? gripperAngle : 0f;
-        for (int i = 0; i < gripperJoints.Count; i++)
-        {
-            var curXDrive = gripperJoints[i].xDrive;
-            curXDrive.target = multipliers[i] * grippingAngle;
-            gripperJoints[i].xDrive = curXDrive;
-        }
-        yield return new WaitForSeconds(jointAssignmentWait);
-    }
+    double[] command;    
 
 
     void Awake()
@@ -80,17 +63,6 @@ public class UR10ROSInterface : MonoBehaviour
 
         string hand_link = wrist_2_link + "/wrist_3_link";
         jointArticulationBodies[5] = UR10.transform.Find(hand_link).GetComponent<ArticulationBody>();
-
-        var gripperJointNames = new string[] { "robotiq_85_right_knuckle_link", "robotiq_85_right_finger_tip_link", "robotiq_85_right_inner_knuckle_link", "robotiq_85_left_knuckle_link", "robotiq_85_left_finger_tip_link", "robotiq_85_left_inner_knuckle_link" };
-        gripperJoints = new List<ArticulationBody>();
-
-        foreach (ArticulationBody articulationBody in UR10.GetComponentsInChildren<ArticulationBody>())
-        {
-            if (gripperJointNames.Contains(articulationBody.name))
-            {
-                gripperJoints.Add(articulationBody);
-            }
-        }
 
     }
 
