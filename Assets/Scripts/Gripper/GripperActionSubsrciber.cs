@@ -26,6 +26,11 @@ public class GripperActionSubsrciber : MonoBehaviour
     
     // State flag
     private bool GripperOpen = true;
+    private bool isGrasped = false;
+    private bool leftCollision = false;
+    private bool rightCollision = false;
+
+    private float graspedAngle;
 
     // Multipliers correspond to the URDF mimic tag for each joint
     private float[] multipliers = new float[] { 1f, 1f, -1f, 1f, 1f, -1f };
@@ -39,13 +44,13 @@ public class GripperActionSubsrciber : MonoBehaviour
     private int numGripperJoints = 8;
     private int numLeftJoints = 4;
     private int numRightJoints = 4;
-    public float gripperAngle = 15;
+    public float gripperMaxAngle = 46.8f;
 
     public GameObject UR10;
     public GameObject leftPad;
     public GameObject rightPad;
-    GripperCollisionChecker leftCollision;
-    GripperCollisionChecker rightCollision;
+    GripperCollisionChecker leftCollisionChecker;
+    GripperCollisionChecker rightCollisionChecker;
     float time = 0;
     float pre_t = 0;
 
@@ -55,42 +60,52 @@ public class GripperActionSubsrciber : MonoBehaviour
     // UI elements
     private Button GripperButton;
 
-    public IEnumerator IterateToGrip(bool toClose)
+    // Button callback for the Gripper Action
+    public void GripperFunc(){
+        GripperOpen = !GripperOpen;
+        StartCoroutine(GripperAction(GripperOpen));    
+    }
+
+    private IEnumerator GripperAction(bool GripperOpen){
+        if (!GripperOpen){
+            for(float i=0; i<gripperMaxAngle; i+=1.6f)
+            {
+                Debug.Log(i);
+                if(isGrasped){
+                    graspedAngle = i;
+                    break;
+                }
+                StartCoroutine(IterateToGrip(i));
+                yield return new WaitForSeconds(jointAssignmentWait);
+            }
+        }
+        else{
+            isGrasped = false;
+            Debug.Log(graspedAngle);
+            for(float i=graspedAngle; i>0; i-=1.6f)
+            {
+                Debug.Log(i);
+                if(i<0) 
+                    i = 0;
+                StartCoroutine(IterateToGrip(i));
+                yield return new WaitForSeconds(jointAssignmentWait);
+            }
+        }
+    }
+
+    public IEnumerator IterateToGrip(float targetAngle)
     {
-        var grippingAngle = toClose ? gripperAngle : 0f;
+        var grippingAngle = targetAngle;
         for (int i = 0; i < gripperJoints.Count; i++)
         {
             var curXDrive = gripperJoints[i].xDrive;
             curXDrive.target = multipliers[i] * grippingAngle;
             curXDrive.stiffness = 20000.0f;
-            curXDrive.lowerLimit = -45.8366f;
-            curXDrive.upperLimit = 45.8366f;
+            curXDrive.lowerLimit = -gripperMaxAngle;
+            curXDrive.upperLimit = gripperMaxAngle;
             gripperJoints[i].xDrive = curXDrive;
         }
         yield return new WaitForSeconds(jointAssignmentWait);
-    }
-
-    /// <summary>
-    ///     Button callback for the Gripper Action
-    /// </summary>
-    public void GripperFunc(){
-        //Debug.Log("Gripper Action...");
-        GripperOpen = !GripperOpen;
-        //Debug.Log(GripperOpen);
-        StartCoroutine(GripperAction(GripperOpen));
-    
-    }
-
-    private IEnumerator GripperAction(bool GripperOpen){
-        if (!GripperOpen){
-            StartCoroutine(IterateToGrip(true));
-            yield return new WaitForSeconds(jointAssignmentWait);
-        }
-        else{
-            yield return new WaitForSeconds(poseAssignmentWait);
-            // Open the gripper to place the target cube
-            StartCoroutine(IterateToGrip(false));
-        }
     }
 
     void Awake()
@@ -106,8 +121,8 @@ public class GripperActionSubsrciber : MonoBehaviour
                 gripperJoints.Add(articulationBody);
             }
         }
-        leftCollision = leftPad.GetComponent<GripperCollisionChecker>();
-        rightCollision = rightPad.GetComponent<GripperCollisionChecker>();
+        leftCollisionChecker = leftPad.GetComponent<GripperCollisionChecker>();
+        rightCollisionChecker = rightPad.GetComponent<GripperCollisionChecker>();
     }
 
     // Start is called before the first frame update
@@ -122,14 +137,23 @@ public class GripperActionSubsrciber : MonoBehaviour
         time += Time.deltaTime;
 
         // Pad collision check
-        if(rightCollision.isCollision){
+        if(rightCollisionChecker.isCollision){
             Debug.Log("Right Pad Collision");
+            rightCollision = true;
+            rightCollisionChecker.isCollision = false;
         }
-        if(leftCollision.isCollision){
+        if(leftCollisionChecker.isCollision){
             Debug.Log("Left Pad Collision");
+            leftCollision = true;
+            leftCollisionChecker.isCollision = false;
         }
-        if(grasping_flag == true){
-            GripperFunc();
+        // if(grasping_flag == true){
+        //     GripperFunc();
+        // }
+        if (leftCollision && rightCollision){
+            isGrasped = true;
+            rightCollision = false;
+            leftCollision = false;
         }
         GripperActionSubsrciber.grasping_flag = false;
 

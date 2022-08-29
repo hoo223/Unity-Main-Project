@@ -1552,7 +1552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   publishMessageFrequency: 0.01
-  gripperAngle: 22
+  gripperAngle: 46.8
   UR10: {fileID: 1341293950}
   leftPad: {fileID: 1611092375}
   rightPad: {fileID: 821752848}
@@ -2036,7 +2036,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346364734}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05176568, y: -0.04151708, z: 0.014447331}
+  m_LocalPosition: {x: 0.0514, y: -0.04151708, z: 0.014447331}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children: []
   m_Father: {fileID: 526481297}
@@ -5194,7 +5194,7 @@ GameObject:
   - component: {fileID: 821752850}
   - component: {fileID: 821752851}
   m_Layer: 6
-  m_Name: Left_Pad_Box
+  m_Name: Right_Pad_Box
   m_TagString: right_gripper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9653,7 +9653,7 @@ GameObject:
   - component: {fileID: 1611092377}
   - component: {fileID: 1611092378}
   m_Layer: 7
-  m_Name: Box
+  m_Name: Left_Pad_Box
   m_TagString: left_gripper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
