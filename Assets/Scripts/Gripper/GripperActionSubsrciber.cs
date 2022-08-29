@@ -24,6 +24,7 @@ public class GripperActionSubsrciber : MonoBehaviour
     private readonly float jointAssignmentWait = 0.06f;
     private readonly float poseAssignmentWait = 0.05f;
     
+    // State flag
     private bool GripperOpen = true;
 
     // Multipliers correspond to the URDF mimic tag for each joint
@@ -41,8 +42,10 @@ public class GripperActionSubsrciber : MonoBehaviour
     public float gripperAngle = 15;
 
     public GameObject UR10;
-    // public GameObject leftPad;
-    // public GameObject rightPad;
+    public GameObject leftPad;
+    public GameObject rightPad;
+    GripperCollisionChecker leftCollision;
+    GripperCollisionChecker rightCollision;
     float time = 0;
     float pre_t = 0;
 
@@ -71,9 +74,9 @@ public class GripperActionSubsrciber : MonoBehaviour
     ///     Button callback for the Gripper Action
     /// </summary>
     public void GripperFunc(){
-        Debug.Log("Gripper Action...");
+        //Debug.Log("Gripper Action...");
         GripperOpen = !GripperOpen;
-        Debug.Log(GripperOpen);
+        //Debug.Log(GripperOpen);
         StartCoroutine(GripperAction(GripperOpen));
     
     }
@@ -99,25 +102,18 @@ public class GripperActionSubsrciber : MonoBehaviour
         {
             if (gripperJointNames.Contains(articulationBody.name))
             {
-                Debug.Log(articulationBody.name);
+                //Debug.Log(articulationBody.name);
                 gripperJoints.Add(articulationBody);
             }
         }
+        leftCollision = leftPad.GetComponent<GripperCollisionChecker>();
+        rightCollision = rightPad.GetComponent<GripperCollisionChecker>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        // Get ROS connection static instance
-        // ros = ROSConnection.instance;
-
-        // Assign UI elements
-        GripperButton = GameObject.Find("/Canvas/ButtonPanel/GripperButton").GetComponent<Button>();
-
-        // Subscriber
-        //ROSConnection.instance.Subscribe<Float64MultiArrayMsg>("position_command", PositionCommand);
-        // ROSConnection.instance.Subscribe<Float64MultiArrayMsg>("velocity_command", VelocityCommand);
-        //ROSConnection.instance.Subscribe<GripperCommandMsg>("/gripper_controller/gripper_cmd/goal", VelocityCommand);
+       
     }
 
     // Update is called once per frame
@@ -125,15 +121,19 @@ public class GripperActionSubsrciber : MonoBehaviour
  
         time += Time.deltaTime;
 
-        // if(rightPad.GetComponent<RightGripperCollisionChecker>().IsCollsion){
-        //     Debug.Log("Right Pad Collision");
-        // }
-
+        // Pad collision check
+        if(rightCollision.isCollision){
+            Debug.Log("Right Pad Collision");
+        }
+        if(leftCollision.isCollision){
+            Debug.Log("Left Pad Collision");
+        }
         if(grasping_flag == true){
             GripperFunc();
         }
         GripperActionSubsrciber.grasping_flag = false;
 
     }
+
 
 }
