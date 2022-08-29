@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 3735125}
   - component: {fileID: 3735127}
   - component: {fileID: 3735126}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,9 +148,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3735124}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00000023841727, y: 0.00000011920884, z: -6.6614046e-14}
-  m_LocalScale: {x: 0.9999971, y: 1.0000092, z: 0.99999386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 492813793}
   m_RootOrder: 0
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 8139378}
   - component: {fileID: 8139377}
   - component: {fileID: 8139376}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: right_outer_finger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ ArticulationBody:
   m_ParentAnchorPosition: {x: -0.03150079, y: -0.004099851, z: -0.00000011397971}
   m_ParentAnchorRotation: {x: 0, y: 0.7071072, z: 0, w: 0.7071072}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
-  m_AnchorRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_AnchorRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
   m_ComputeParentAnchor: 1
   m_ArticulationJointType: 2
   m_LinearX: 1
@@ -388,6 +388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_knuckle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d636d48b29e5a7cea1e3864bf0f87a9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 0d636d48b29e5a7cea1e3864bf0f87a9, type: 3}
     - {fileID: -5754084199372789682, guid: 0d636d48b29e5a7cea1e3864bf0f87a9, type: 3}
@@ -477,8 +481,8 @@ ArticulationBody:
   m_GameObject: {fileID: 21236286}
   m_Enabled: 1
   m_Mass: 1
-  m_ParentAnchorPosition: {x: 0, y: 0, z: 0}
-  m_ParentAnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_ParentAnchorPosition: {x: 0, y: 6.252965e-14, z: 0.00000071525585}
+  m_ParentAnchorRotation: {x: 0.50000024, y: -0.50000024, z: -0.50000024, w: 0.50000024}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_ComputeParentAnchor: 1
@@ -544,7 +548,7 @@ GameObject:
   - component: {fileID: 24585646}
   - component: {fileID: 24585645}
   - component: {fileID: 24585644}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: left_inner_knuckle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -593,9 +597,9 @@ ArticulationBody:
   m_Enabled: 1
   m_Mass: 1
   m_ParentAnchorPosition: {x: 0.012699253, y: 0.061420098, z: -0.0000000020810071}
-  m_ParentAnchorRotation: {x: 0, y: -0.7071073, z: 0, w: 0.7071072}
+  m_ParentAnchorRotation: {x: 0, y: -0.70710725, z: 0, w: 0.7071071}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
-  m_AnchorRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_AnchorRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
   m_ComputeParentAnchor: 1
   m_ArticulationJointType: 2
   m_LinearX: 1
@@ -743,7 +747,7 @@ GameObject:
   m_Component:
   - component: {fileID: 95850014}
   - component: {fileID: 95850015}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -857,7 +861,7 @@ GameObject:
   m_Component:
   - component: {fileID: 122773911}
   - component: {fileID: 122773912}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -951,8 +955,8 @@ ArticulationBody:
   m_GameObject: {fileID: 143710845}
   m_Enabled: 1
   m_Mass: 1
-  m_ParentAnchorPosition: {x: 0, y: 0, z: 0}
-  m_ParentAnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_ParentAnchorPosition: {x: -0.09220001, y: 0, z: -0.0000007152558}
+  m_ParentAnchorRotation: {x: -0.5000002, y: -0.5000002, z: 0.5000002, w: 0.5000002}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_ComputeParentAnchor: 1
@@ -1177,7 +1181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 177935313}
   - component: {fileID: 177935314}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1221,7 +1225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 197226326}
   - component: {fileID: 197226327}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1266,7 +1270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 209446627}
   - component: {fileID: 209446628}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1517,7 +1521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   publishMessageFrequency: 0.01
-  gripperAngle: 30
+  gripperAngle: 21.5
   UR10: {fileID: 1341293950}
 --- !u!4 &263319080
 Transform:
@@ -1633,7 +1637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 316735269}
   - component: {fileID: 316735270}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1677,7 +1681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 326792645}
   - component: {fileID: 326792646}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1721,7 +1725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 330057015}
   - component: {fileID: 330057016}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1836,7 +1840,7 @@ ArticulationBody:
   m_GameObject: {fileID: 335595387}
   m_Enabled: 1
   m_Mass: 12.93
-  m_ParentAnchorPosition: {x: -0.220941, y: 0, z: 0}
+  m_ParentAnchorPosition: {x: -0.220941, y: 0.000000029802322, z: 0}
   m_ParentAnchorRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1891,6 +1895,119 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsBaseLink: 0
+--- !u!1 &346364734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 346364739}
+  - component: {fileID: 346364738}
+  - component: {fileID: 346364737}
+  - component: {fileID: 346364736}
+  - component: {fileID: 346364735}
+  m_Layer: 0
+  m_Name: Cube2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &346364735
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346364734}
+  serializedVersion: 2
+  m_Mass: 0.05
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 2
+--- !u!65 &346364736
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346364734}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &346364737
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346364734}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &346364738
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346364734}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &346364739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346364734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.4374, y: 0.7707, z: 1.1843}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &356463653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2036,6 +2153,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_finger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8a78445a30ccd4287b48f2a81f2acf55, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a78445a30ccd4287b48f2a81f2acf55, type: 3}
 --- !u!4 &373736573 stripped
@@ -2114,6 +2235,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_knuckle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1261404d675f5c835a4c93ec9fc126e7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1261404d675f5c835a4c93ec9fc126e7, type: 3}
 --- !u!4 &378893952 stripped
@@ -2131,7 +2256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 381692870}
   - component: {fileID: 381692871}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2232,6 +2357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_finger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1d8d959d5fc647d4ea4e463dbfed54b7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 1d8d959d5fc647d4ea4e463dbfed54b7, type: 3}
     - {fileID: -5754084199372789682, guid: 1d8d959d5fc647d4ea4e463dbfed54b7, type: 3}
@@ -2270,7 +2399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 389935497}
   - component: {fileID: 389935498}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2407,7 +2536,7 @@ GameObject:
   - component: {fileID: 422102017}
   - component: {fileID: 422102016}
   - component: {fileID: 422102015}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: right_inner_finger_pad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2455,8 +2584,8 @@ ArticulationBody:
   m_GameObject: {fileID: 422102013}
   m_Enabled: 1
   m_Mass: 1
-  m_ParentAnchorPosition: {x: 0, y: 0, z: 0}
-  m_ParentAnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_ParentAnchorPosition: {x: 0.02201956, y: 0.03242034, z: -8.910209e-10}
+  m_ParentAnchorRotation: {x: 0, y: 0, z: 0.7071072, w: 0.7071072}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_ComputeParentAnchor: 1
@@ -2520,7 +2649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 432067878}
   - component: {fileID: 432067879}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2664,6 +2793,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 21e1dcc6ab4c032868703867b2db4632, type: 3}
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_knuckle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21e1dcc6ab4c032868703867b2db4632, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 21e1dcc6ab4c032868703867b2db4632, type: 3}
@@ -2970,7 +3103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 492813793}
   - component: {fileID: 492813794}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2984,9 +3117,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492813792}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00000047683497, y: 0.0000002384186, z: -1.3500378e-13}
-  m_LocalScale: {x: 0.00635, y: 0.0375, z: 0.022}
+  m_LocalRotation: {x: -2.1175781e-22, y: -3.552713e-14, z: -1.7763551e-15, w: 1}
+  m_LocalPosition: {x: 0.0000007152534, y: 0.00000032782526, z: -2.0072922e-13}
+  m_LocalScale: {x: 0.00635002, y: 0.037500333, z: 0.021999786}
   m_Children:
   - {fileID: 3735125}
   m_Father: {fileID: 95850014}
@@ -3075,6 +3208,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8a78445a30ccd4287b48f2a81f2acf55, type: 3}
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_finger
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8a78445a30ccd4287b48f2a81f2acf55, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a78445a30ccd4287b48f2a81f2acf55, type: 3}
@@ -3311,6 +3448,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_finger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d6f36c5bb03ef9ca8a114724f67a84fd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f36c5bb03ef9ca8a114724f67a84fd, type: 3}
 --- !u!4 &551356724 stripped
@@ -3417,7 +3558,7 @@ GameObject:
   m_Component:
   - component: {fileID: 615228207}
   - component: {fileID: 615228208}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3519,6 +3660,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_knuckle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d636d48b29e5a7cea1e3864bf0f87a9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 0d636d48b29e5a7cea1e3864bf0f87a9, type: 3}
     - {fileID: -5754084199372789682, guid: 0d636d48b29e5a7cea1e3864bf0f87a9, type: 3}
@@ -3559,7 +3704,7 @@ GameObject:
   - component: {fileID: 656085918}
   - component: {fileID: 656085917}
   - component: {fileID: 656085916}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: left_inner_finger_pad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3607,8 +3752,8 @@ ArticulationBody:
   m_GameObject: {fileID: 656085914}
   m_Enabled: 1
   m_Mass: 1
-  m_ParentAnchorPosition: {x: 0, y: 0, z: 0}
-  m_ParentAnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_ParentAnchorPosition: {x: 0.022021038, y: 0.032420386, z: -0.000000019260371}
+  m_ParentAnchorRotation: {x: 0, y: 0, z: 0.7071073, w: 0.7071073}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_ComputeParentAnchor: 1
@@ -3672,7 +3817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 684491562}
   - component: {fileID: 684491563}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3948,7 +4093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 731496924}
   - component: {fileID: 731496925}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4131,6 +4276,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bda0d572e9f0c432687899d4bb6e21b4, type: 3}
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_finger
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bda0d572e9f0c432687899d4bb6e21b4, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: bda0d572e9f0c432687899d4bb6e21b4, type: 3}
@@ -4718,6 +4867,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_knuckle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cb6d1fb5271e5280f8a4c3ae83bf5d07, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb6d1fb5271e5280f8a4c3ae83bf5d07, type: 3}
 --- !u!4 &794678291 stripped
@@ -4735,7 +4888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 806675673}
   - component: {fileID: 806675674}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4826,7 +4979,7 @@ GameObject:
   m_Component:
   - component: {fileID: 808433666}
   - component: {fileID: 808433667}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4931,6 +5084,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_finger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d6f36c5bb03ef9ca8a114724f67a84fd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f36c5bb03ef9ca8a114724f67a84fd, type: 3}
 --- !u!4 &819664680 stripped
@@ -4948,7 +5105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 821752849}
   - component: {fileID: 821752850}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4962,9 +5119,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821752848}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00000023841717, y: 0.00000005960442, z: 0}
-  m_LocalScale: {x: 0.9999971, y: 1.0000092, z: 0.99999386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1458872951}
   m_RootOrder: 0
@@ -5062,7 +5219,7 @@ ArticulationBody:
   m_GameObject: {fileID: 828016323}
   m_Enabled: 1
   m_Mass: 3.87
-  m_ParentAnchorPosition: {x: 0.1719, y: 0.6120002, z: 0}
+  m_ParentAnchorPosition: {x: 0.1719, y: 0.6120002, z: 0.000000059604645}
   m_ParentAnchorRotation: {x: 0, y: 0, z: 0, w: 1.0000001}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -5127,7 +5284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 848956637}
   - component: {fileID: 848956638}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5427,7 +5584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 914426669}
   - component: {fileID: 914426670}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5471,7 +5628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 932705865}
   - component: {fileID: 932705866}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5485,9 +5642,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932705864}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0000004768349, y: 0.0000001192093, z: 0}
-  m_LocalScale: {x: 0.00635, y: 0.0375, z: 0.022}
+  m_LocalRotation: {x: -0, y: -0, z: -1.6940655e-21, w: 1}
+  m_LocalPosition: {x: -0.0000007152534, y: 0.00000020861606, z: 1.4210914e-14}
+  m_LocalScale: {x: 0.0063500185, y: 0.037500326, z: 0.021999782}
   m_Children:
   - {fileID: 1707581228}
   m_Father: {fileID: 432067878}
@@ -5518,7 +5675,7 @@ GameObject:
   - component: {fileID: 939524846}
   - component: {fileID: 939524845}
   - component: {fileID: 939524844}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: left_inner_finger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5689,6 +5846,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_finger
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1d8d959d5fc647d4ea4e463dbfed54b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 1d8d959d5fc647d4ea4e463dbfed54b7, type: 3}
     - {fileID: -5754084199372789682, guid: 1d8d959d5fc647d4ea4e463dbfed54b7, type: 3}
@@ -5855,7 +6016,7 @@ GameObject:
   m_Component:
   - component: {fileID: 981632921}
   - component: {fileID: 981632922}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6214,6 +6375,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_knuckle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21e1dcc6ab4c032868703867b2db4632, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 21e1dcc6ab4c032868703867b2db4632, type: 3}
     - {fileID: -5754084199372789682, guid: 21e1dcc6ab4c032868703867b2db4632, type: 3}
@@ -6348,8 +6513,8 @@ ArticulationBody:
   m_GameObject: {fileID: 1084001404}
   m_Enabled: 1
   m_Mass: 1
-  m_ParentAnchorPosition: {x: 0, y: 0, z: 0}
-  m_ParentAnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_ParentAnchorPosition: {x: -9.313226e-10, y: -0.010000006, z: -0.0000007152557}
+  m_ParentAnchorRotation: {x: 0, y: 0, z: 0.70710707, w: 0.70710707}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_ComputeParentAnchor: 1
@@ -6678,7 +6843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1128027575}
   - component: {fileID: 1128027576}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6817,8 +6982,8 @@ ArticulationBody:
   m_GameObject: {fileID: 1151672872}
   m_Enabled: 1
   m_Mass: 1
-  m_ParentAnchorPosition: {x: 0, y: 0, z: 0}
-  m_ParentAnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_ParentAnchorPosition: {x: -0.09220001, y: 0, z: -0.0000007152558}
+  m_ParentAnchorRotation: {x: 0, y: 0, z: 1.0000004, w: 0}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_ComputeParentAnchor: 1
@@ -6926,7 +7091,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1187178667}
   - component: {fileID: 1187178668}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6973,7 +7138,7 @@ GameObject:
   - component: {fileID: 1198701255}
   - component: {fileID: 1198701254}
   - component: {fileID: 1198701253}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: right_inner_knuckle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7022,9 +7187,9 @@ ArticulationBody:
   m_Enabled: 1
   m_Mass: 1
   m_ParentAnchorPosition: {x: -0.012700564, y: 0.061420098, z: -0.00000012501555}
-  m_ParentAnchorRotation: {x: 0, y: 0.7071072, z: 0, w: 0.7071072}
+  m_ParentAnchorRotation: {x: 0, y: 0.7071071, z: 0, w: 0.7071071}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
-  m_AnchorRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_AnchorRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
   m_ComputeParentAnchor: 1
   m_ArticulationJointType: 2
   m_LinearX: 1
@@ -7172,7 +7337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1210820222}
   - component: {fileID: 1210820223}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7277,6 +7442,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1261404d675f5c835a4c93ec9fc126e7, type: 3}
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_knuckle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1261404d675f5c835a4c93ec9fc126e7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1261404d675f5c835a4c93ec9fc126e7, type: 3}
@@ -7431,7 +7600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1224051083}
   - component: {fileID: 1224051084}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7678,7 +7847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1262737769}
   - component: {fileID: 1262737770}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7692,9 +7861,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262737768}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00000047683497, y: 0.0000002384186, z: -1.3500378e-13}
-  m_LocalScale: {x: 0.00635, y: 0.0375, z: 0.022}
+  m_LocalRotation: {x: -2.1175781e-22, y: -3.552713e-14, z: -1.7763551e-15, w: 1}
+  m_LocalPosition: {x: 0.0000007152534, y: 0.00000032782526, z: -2.0072922e-13}
+  m_LocalScale: {x: 0.00635002, y: 0.037500333, z: 0.021999786}
   m_Children:
   - {fileID: 1611092376}
   m_Father: {fileID: 731496924}
@@ -7767,7 +7936,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1273236794}
   - component: {fileID: 1273236795}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8066,7 +8235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1302179025}
   - component: {fileID: 1302179026}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8111,7 +8280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1321858623}
   - component: {fileID: 1321858624}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8222,7 +8391,7 @@ MonoBehaviour:
   selectedJoint: 
   selectedIndex: 0
   control: 0
-  stiffness: 10000
+  stiffness: 50000
   damping: 1000
   forceLimit: 1000
   speed: 5
@@ -8271,7 +8440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1371802843}
   - component: {fileID: 1371802844}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8613,6 +8782,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: robotiq_arg2f_85_inner_knuckle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cb6d1fb5271e5280f8a4c3ae83bf5d07, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb6d1fb5271e5280f8a4c3ae83bf5d07, type: 3}
 --- !u!4 &1458188112 stripped
@@ -8630,7 +8803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1458872951}
   - component: {fileID: 1458872952}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8644,9 +8817,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1458872950}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0000004768349, y: 0.0000001192093, z: 0}
-  m_LocalScale: {x: 0.00635, y: 0.0375, z: 0.022}
+  m_LocalRotation: {x: -0, y: -0, z: -1.6940655e-21, w: 1}
+  m_LocalPosition: {x: -0.0000007152534, y: 0.00000020861606, z: 1.4210914e-14}
+  m_LocalScale: {x: 0.0063500185, y: 0.037500326, z: 0.021999782}
   m_Children:
   - {fileID: 821752849}
   m_Father: {fileID: 848956637}
@@ -8675,7 +8848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1463999801}
   - component: {fileID: 1463999802}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8767,7 +8940,7 @@ GameObject:
   - component: {fileID: 1484575279}
   - component: {fileID: 1484575278}
   - component: {fileID: 1484575277}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: left_outer_finger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9052,7 +9225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1556556307}
   - component: {fileID: 1556556308}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9277,7 +9450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1611092376}
   - component: {fileID: 1611092377}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9291,9 +9464,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611092375}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00000023841727, y: 0.00000011920884, z: -6.6614046e-14}
-  m_LocalScale: {x: 0.9999971, y: 1.0000092, z: 0.99999386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1262737769}
   m_RootOrder: 0
@@ -9377,6 +9550,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bda0d572e9f0c432687899d4bb6e21b4, type: 3}
       propertyPath: m_Name
       value: robotiq_arg2f_85_outer_finger
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bda0d572e9f0c432687899d4bb6e21b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: bda0d572e9f0c432687899d4bb6e21b4, type: 3}
@@ -9592,7 +9769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1637138494}
   - component: {fileID: 1637138495}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9637,7 +9814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1663039510}
   - component: {fileID: 1663039511}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9725,7 +9902,7 @@ GameObject:
   - component: {fileID: 1707581228}
   - component: {fileID: 1707581230}
   - component: {fileID: 1707581229}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9739,9 +9916,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707581227}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00000023841717, y: 0.00000005960442, z: 0}
-  m_LocalScale: {x: 0.9999971, y: 1.0000092, z: 0.99999386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 932705865}
   m_RootOrder: 0
@@ -9895,7 +10072,7 @@ GameObject:
   - component: {fileID: 1804545832}
   - component: {fileID: 1804545831}
   - component: {fileID: 1804545830}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: right_outer_knuckle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9945,9 +10122,9 @@ ArticulationBody:
   m_Enabled: 1
   m_Mass: 1
   m_ParentAnchorPosition: {x: -0.030601872, y: 0.05490412, z: -0.000000008238586}
-  m_ParentAnchorRotation: {x: 0, y: 0.7071072, z: 0, w: 0.7071072}
+  m_ParentAnchorRotation: {x: 0, y: 0.7071071, z: 0, w: 0.7071071}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
-  m_AnchorRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_AnchorRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
   m_ComputeParentAnchor: 1
   m_ArticulationJointType: 2
   m_LinearX: 1
@@ -10060,7 +10237,7 @@ ArticulationBody:
   m_Enabled: 1
   m_Mass: 1
   m_ParentAnchorPosition: {x: 0, y: 0, z: 0}
-  m_ParentAnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_ParentAnchorRotation: {x: 0.7071068, y: 0.7071068, z: -0.00000003090862, w: -0.00000003090862}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_ComputeParentAnchor: 1
@@ -10562,7 +10739,7 @@ ArticulationBody:
   m_GameObject: {fileID: 1917952717}
   m_Enabled: 1
   m_Mass: 7.778
-  m_ParentAnchorPosition: {x: 0, y: 0.1273, z: 0}
+  m_ParentAnchorPosition: {x: 0, y: 0.12730002, z: 0}
   m_ParentAnchorRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
@@ -10710,7 +10887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1939002202}
   - component: {fileID: 1939002203}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10872,8 +11049,8 @@ ArticulationBody:
   m_GameObject: {fileID: 1945357761}
   m_Enabled: 1
   m_Mass: 0.22652
-  m_ParentAnchorPosition: {x: 0, y: 0, z: 0}
-  m_ParentAnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_ParentAnchorPosition: {x: -0.0000007152561, y: -6.7762636e-21, z: -1.1368681e-13}
+  m_ParentAnchorRotation: {x: 0, y: 0, z: 0.7071072, w: 0.7071072}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_ComputeParentAnchor: 1
@@ -10982,7 +11159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1955478968}
   - component: {fileID: 1955478969}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11161,7 +11338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1987670684}
   - component: {fileID: 1987670685}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11208,7 +11385,7 @@ GameObject:
   - component: {fileID: 2010618564}
   - component: {fileID: 2010618563}
   - component: {fileID: 2010618562}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: left_outer_knuckle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11322,7 +11499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2013635785}
   - component: {fileID: 2013635786}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collisions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11455,7 +11632,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2090780372}
   - component: {fileID: 2090780373}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: unnamed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11502,7 +11679,7 @@ GameObject:
   - component: {fileID: 2115558087}
   - component: {fileID: 2115558086}
   - component: {fileID: 2115558085}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: right_inner_finger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11554,7 +11731,7 @@ ArticulationBody:
   m_ParentAnchorPosition: {x: -0.00610101, y: 0.047100287, z: -0.00000012999274}
   m_ParentAnchorRotation: {x: 0, y: 0.7071072, z: 0, w: 0.7071072}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
-  m_AnchorRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_AnchorRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
   m_ComputeParentAnchor: 1
   m_ArticulationJointType: 2
   m_LinearX: 1
@@ -11686,8 +11863,8 @@ ArticulationBody:
   m_GameObject: {fileID: 2139312775}
   m_Enabled: 1
   m_Mass: 0.3
-  m_ParentAnchorPosition: {x: 0, y: 0, z: 0}
-  m_ParentAnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_ParentAnchorPosition: {x: 0.0000000046566138, y: 0.041500002, z: -0.00000071525596}
+  m_ParentAnchorRotation: {x: 0.70710707, y: -0.70710707, z: 0, w: 0}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_ComputeParentAnchor: 1
