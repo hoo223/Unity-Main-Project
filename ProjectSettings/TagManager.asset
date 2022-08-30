@@ -7,7 +7,6 @@ TagManager:
   - robot
   - plane
   - object
-  - Object
   - right_gripper
   - left_gripper
   layers:
