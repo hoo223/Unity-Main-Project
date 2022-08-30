@@ -147,15 +147,15 @@ public class GripperActionSubsrciber : MonoBehaviour
             leftCollision = true;
             leftCollisionChecker.isCollision = false;
         }
-        // if(grasping_flag == true){
-        //     GripperFunc();
-        // }
         if (leftCollision && rightCollision){
             isGrasped = true;
             rightCollision = false;
             leftCollision = false;
         }
-        GripperActionSubsrciber.grasping_flag = false;
+        // if(grasping_flag == true){
+        //     GripperFunc();
+        // }
+        // GripperActionSubsrciber.grasping_flag = false;
 
     }
 
