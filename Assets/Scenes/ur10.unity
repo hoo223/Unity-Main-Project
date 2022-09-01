@@ -1427,7 +1427,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3075759398607946752, guid: ad52ce3c63e5e41e089ede024ab45d65, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3075759398607946752, guid: ad52ce3c63e5e41e089ede024ab45d65, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3352,8 +3352,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 718752947}
-  - {fileID: 1430307066}
   - {fileID: 1294501097}
+  - {fileID: 1430307066}
   - {fileID: 346364739}
   - {fileID: 705507995}
   - {fileID: 1337603941}
@@ -8423,7 +8423,7 @@ Transform:
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children: []
   m_Father: {fileID: 526481297}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1294501098
 Rigidbody:
@@ -8721,7 +8721,7 @@ MonoBehaviour:
   selectedIndex: 0
   control: 0
   stiffness: 50000
-  damping: 1000
+  damping: 10000
   forceLimit: 1000
   speed: 5
   torque: 100
