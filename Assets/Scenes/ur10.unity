@@ -8721,7 +8721,7 @@ MonoBehaviour:
   selectedIndex: 0
   control: 0
   stiffness: 50000
-  damping: 10000
+  damping: 2500
   forceLimit: 1000
   speed: 5
   torque: 100
