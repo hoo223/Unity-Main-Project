@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Unity.Robotics.ROSTCPConnector;
 using RosMessageTypes.Sensor; // JointStateMsg
-using RosMessageTypes.Std; // Float64MultiArrayMsg
+using RosMessageTypes.Std; // Float64MultiArrayMsg, Bool
 using System.Linq;
 using Unity.Robotics.ROSTCPConnector.ROSGeometry;
 
@@ -31,6 +31,7 @@ public class UR10ROSInterface : MonoBehaviour
     public string topicJointState = "/unity_ur10_joint_states";
 
     public GameObject UR10;
+    public GripperActionSubsrciber GripperController;
     float pre_t = 0;
 
     
@@ -79,6 +80,7 @@ public class UR10ROSInterface : MonoBehaviour
         // Subscriber
         //ROSConnection.instance.Subscribe<Float64MultiArrayMsg>("position_command", PositionCommand);
         ROSConnection.instance.Subscribe<Float64MultiArrayMsg>("velocity_command", VelocityCommand);
+        ROSConnection.instance.Subscribe<BoolMsg>("/unity/grasping_state", GraspingState);
 
         command = new double[numRobotJoints];
     }
@@ -92,6 +94,13 @@ public class UR10ROSInterface : MonoBehaviour
             joint1XDrive.target = (float)actionMessage.data[joint] * Mathf.Rad2Deg;
             jointArticulationBodies[joint].xDrive = joint1XDrive;
         }
+    }
+
+    void GraspingState(BoolMsg Message)
+    {
+        Debug.Log(Message.data);
+        GripperController.GripperOpen = Message.data;
+        GripperController.GripperFunc();
     }
 
     void VelocityCommand(Float64MultiArrayMsg actionMessage)
