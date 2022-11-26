@@ -25,7 +25,7 @@ public class GripperActionSubsrciber : MonoBehaviour
     private readonly float poseAssignmentWait = 0.05f;
     
     // State flag
-    private bool GripperOpen = true;
+    public bool GripperOpen = true;
     private bool isGrasped = false;
     private bool leftCollision = false;
     private bool rightCollision = false;
@@ -62,24 +62,28 @@ public class GripperActionSubsrciber : MonoBehaviour
 
     // Button callback for the Gripper Action
     public void GripperFunc(){
-        GripperOpen = !GripperOpen;
+        Debug.Log("GripperFunc Called");
         StartCoroutine(GripperAction(GripperOpen));    
     }
 
     private IEnumerator GripperAction(bool GripperOpen){
         if (!GripperOpen){
+            Debug.Log("Close!!!!");
             for(float i=0; i<gripperMaxAngle; i+=1.6f)
             {
                 Debug.Log(i);
                 if(isGrasped){
-                    graspedAngle = i;
+                    graspedAngle = i+0.5f;
+                    StartCoroutine(IterateToGrip(i+0.5f));
                     break;
                 }
+                graspedAngle = i;
                 StartCoroutine(IterateToGrip(i));
                 yield return new WaitForSeconds(jointAssignmentWait);
             }
         }
         else{
+            Debug.Log("Open!!!!");
             isGrasped = false;
             Debug.Log(graspedAngle);
             for(float i=graspedAngle; i>0; i-=1.6f)
@@ -100,7 +104,8 @@ public class GripperActionSubsrciber : MonoBehaviour
         {
             var curXDrive = gripperJoints[i].xDrive;
             curXDrive.target = multipliers[i] * grippingAngle;
-            curXDrive.stiffness = 20000.0f;
+            curXDrive.stiffness = 100000.0f;
+            curXDrive.forceLimit = 50000.0f;
             curXDrive.lowerLimit = -gripperMaxAngle;
             curXDrive.upperLimit = gripperMaxAngle;
             gripperJoints[i].xDrive = curXDrive;
