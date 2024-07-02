@@ -26,6 +26,8 @@ public class GripperCollisionChecker : MonoBehaviour
         {
             Debug.Log("object");
         }
+        Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
+        Debug.Log("force: " + collisionForce.x + collisionForce.y + collisionForce.z);
         // else if (collision.collider.gameObject.CompareTag("left_gripper"))
         // {
         //     Debug.Log("left_gripper");

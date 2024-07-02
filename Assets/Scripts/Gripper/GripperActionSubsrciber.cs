@@ -105,7 +105,7 @@ public class GripperActionSubsrciber : MonoBehaviour
             var curXDrive = gripperJoints[i].xDrive;
             curXDrive.target = multipliers[i] * grippingAngle;
             curXDrive.stiffness = 100000.0f;
-            curXDrive.forceLimit = 50000.0f;
+            curXDrive.forceLimit = 100000.0f;
             curXDrive.lowerLimit = -gripperMaxAngle;
             curXDrive.upperLimit = gripperMaxAngle;
             gripperJoints[i].xDrive = curXDrive;
